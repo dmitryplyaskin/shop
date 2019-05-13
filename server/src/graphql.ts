@@ -5,6 +5,11 @@
  */
 
 /* tslint:disable */
+export class Author {
+    login?: string;
+    password?: string;
+}
+
 export abstract class IQuery {
     abstract temp__(): boolean | Promise<boolean>;
 }
