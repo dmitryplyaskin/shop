@@ -2,3 +2,7 @@ type Author {
   login: String
   password: String
 }
+
+type Token {
+  token: String
+}
