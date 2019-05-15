@@ -1,8 +1,7 @@
+type Token {
+  token: String
+}
 type Author {
   login: String
   password: String
-}
-
-type Token {
-  token: String
 }
