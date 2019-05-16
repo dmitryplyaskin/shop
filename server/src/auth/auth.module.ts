@@ -10,7 +10,10 @@ import { AuthResolver } from './auth.resolvers';
   imports: [
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
-      secretOrPrivateKey: 'secretKey',
+      publicKey: 'public',
+      secretOrKeyProvider: () => {
+        return 'secretKey';
+      },
       signOptions: {
         expiresIn: 3600,
       },

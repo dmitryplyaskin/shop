@@ -1,7 +1,14 @@
-type Token {
-  token: String
+type Mutation {
+  createToken(createUserInput: CreateUserInput): Token
 }
-type Author {
-  login: String
+
+type Token {
+  accessToken: String
+  expiresIn: Int
+  email: String
+}
+
+input CreateUserInput {
+  email: String
   password: String
 }

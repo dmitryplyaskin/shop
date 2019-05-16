@@ -9,13 +9,8 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     AuthModule,
     GraphQLModule.forRoot({
-      debug: true,
-      playground: true,
-      definitions: {
-        path: join(process.cwd(), 'src/graphql.ts'),
-        outputAs: 'class',
-      },
       typePaths: ['./**/*.graphql'],
+      installSubscriptionHandlers: true,
     }),
   ],
   controllers: [AppController],

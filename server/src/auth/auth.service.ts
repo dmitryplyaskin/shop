@@ -6,12 +6,13 @@ import { JwtPayload } from './interfaces/jwt-payload.interface';
 export class AuthService {
   constructor(private readonly jwtService: JwtService) {}
 
-  async createToken() {
-    const user: JwtPayload = { email: 'test@email.com' };
+  async createToken({ email = 'test@email.com', password = null }) {
+    const user: JwtPayload = { email };
     const accessToken = this.jwtService.sign(user);
     return {
       expiresIn: 3600,
       accessToken,
+      email: email,
     };
   }
 
