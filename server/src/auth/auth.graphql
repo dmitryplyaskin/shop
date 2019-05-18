@@ -1,14 +1,27 @@
 type Mutation {
-  createToken(createUserInput: CreateUserInput): Token
+  login(createLoginInput: CreateLoginInput): Login
+  register(createRegisterInput: CreateRegisterInput): Register
 }
 
-type Token {
+type Login {
   accessToken: String
   expiresIn: Int
   email: String
 }
 
-input CreateUserInput {
+input CreateLoginInput {
   email: String
   password: String
+}
+
+type Register {
+  accessToken: String
+  expiresIn: Int
+  email: String
+}
+
+input CreateRegisterInput {
+  email: String
+  password: String
+  name: String
 }
