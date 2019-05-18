@@ -20,7 +20,6 @@ export class AuthResolver {
   args: {
     email: string;
     password: string;
-    name: string;
   }): Promise<any> {
     return await this.authService.createToken(args);
   }

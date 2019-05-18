@@ -6,7 +6,7 @@ import { JwtPayload } from './interfaces/jwt-payload.interface';
 export class AuthService {
   constructor(private readonly jwtService: JwtService) {}
 
-  async createToken({ email = 'test@email.com', password = null }) {
+  async createToken({ email, password }: { email: string; password: string }) {
     const user: JwtPayload = { email };
     const accessToken = this.jwtService.sign(user);
     return {
