@@ -1,8 +1,0 @@
-{
-  "name": "my-online-shop",
-  "version": "0.0.1",
-  "main": "index.js",
-  "repository": "git@github.com:dmitryplyaskin/shop.git",
-  "author": "Dmitry <dima28rus97@gmail.com>",
-  "license": "MIT"
-}
